@@ -1,0 +1,9 @@
+body {
+    background: #E1F8BC;
+    text-align: center;
+}
+
+div#form_area {
+    background: white;
+    display: inline;
+}

@@ -1,0 +1,26 @@
+{
+    "parks": [
+        {
+            "id": 1,
+            "name": "Yellowstone National Park",
+            "imageURL": "https://images.newscientist.com/wp-content/uploads/2022/12/01182812/SEI_135903350.jpg",
+            "description": "Yellowstone National Park is located in three states: Idaho, Montana, and Wyoming.",
+            "donations": 0;
+        },
+        {
+            "id": 2,
+            "name": "Rocky Mountain National Park",
+            "imageURL": "https://cdn.aarp.net/content/dam/aarp/travel/Domestic/2020/07/1140-rocky-mountain-national-park.jpg",
+            "decription": "Rocky Mountain National Park is in Colorado",
+            "donations": 0,
+        },
+        {
+            "id": 3,
+            "name": "Grand Canyon National Park",
+            "imageURL": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg",
+            "decription": "Grand Canyon National Park is in Arizona.",
+            "donations": 0,
+        }
+
+
+}
