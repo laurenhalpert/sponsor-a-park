@@ -1,4 +1,4 @@
-//
+//Event Listeners
 const form = document.querySelector("form")
 form.addEventListener("submit", handleSubmit)
 
@@ -54,8 +54,16 @@ function renderPark(park) {
 
 
 //Fetch Functions
+function getParks() {
+    fetch("http://localhost:3000/parks")
+    .then(response => response.json())
+    .then(parkData => parkData.forEach(park => renderPark(park)))
+}
 
 
 
-
-
+//other
+function initialize() {
+    getParks();
+}
+initialize();
