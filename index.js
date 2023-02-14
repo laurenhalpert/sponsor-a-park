@@ -16,7 +16,7 @@ function handleSubmit(event) {
     };
 
     renderPark(parkObj);
-    //sponsorPark(parkObj);
+    sponsorPark(parkObj);
 }
 
 
@@ -58,6 +58,18 @@ function getParks() {
     fetch("http://localhost:3000/parks")
     .then(response => response.json())
     .then(parkData => parkData.forEach(park => renderPark(park)))
+}
+
+function sponsorPark(parkObj) {
+    fetch(`http://localhost:3000/parks/${park.id}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(parkObj)
+    })
+    .then(response => response.json())
+    .then(park => console.log(park))
 }
 
 
