@@ -4,6 +4,10 @@ body {
 }
 
 div#form_area {
-    background: white;
+    background-color: white;
+    display: inline;
+}
+
+ul {
     display: inline;
 }
