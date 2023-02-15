@@ -8,10 +8,15 @@ form.addEventListener("submit", handleSubmit)
 //Event Handlers
 function handleSubmit(event) {
     event.preventDefault();
+
+    let inputName = document.querySelector("#park_name");
+    let inputURL = document.querySelector("#park_imageURL");
+    let textareaDescription= document.querySelector("#park_description");
+
     let parkObj = {
-        name: event.target.name.value,
-        imageURL: event.target.imageURL.value,
-        description: event.target.description.value,
+        name: inputName.value,
+        imageURL: inputURL.value,
+        description: textareaDescription.value,
         donations: 0,
     };
 
