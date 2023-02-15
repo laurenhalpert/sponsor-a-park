@@ -30,7 +30,7 @@ function renderPark(park) {
     const card = document.createElement("li");
     card.className ="cards";
     card.innerHTML = `
-    <img src="${park.imageURL}>
+    <img src="${park.imageURL}" class="photo">
     <div class="content">
         <h4>${park.name}</h4>
         <p>
@@ -61,13 +61,13 @@ function getParks() {
 }
 
 function sponsorPark(parkObj) {
-    fetch(`http://localhost:3000/parks/${park.id}`, {
+    fetch(`http://localhost:3000/parks`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(parkObj)
-    })
+        })
     .then(response => response.json())
     .then(park => console.log(park))
 }

@@ -11,3 +11,11 @@ div#form_area {
 ul {
     display: inline;
 }
+
+img {
+    height: 300px;
+}
+
+li {
+    padding: 50px;
+}
