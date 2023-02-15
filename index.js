@@ -44,10 +44,16 @@ function renderPark(park) {
         <p>${park.description}</p>
     </div>
     <div class="buttons">
-        <button id = "donate"> Donate </button>
+        <button id = "donate"> Donate $50 </button>
         <button id = "abandon"> Abandon </button>
     </div>
     `
+
+    card.querySelector("#donate").addEventListener("click", () => {
+        park.donations += 50;
+        card.querySelector("span").textContent = park.donations;
+        updateDonations(park);
+    });
     document.querySelector("#park_list").appendChild(card);
 }
 
@@ -75,6 +81,21 @@ function sponsorPark(parkObj) {
         })
     .then(response => response.json())
     .then(park => console.log(park))
+}
+
+function updateDonations(parkObj) {
+    fetch(`http://localhost:3000/parks/${parkObj.id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(parkObj)
+        })
+    .then(response => response.json())
+    .then(park => {
+        park.donations += 50;
+        console.log(park);
+    })
 }
 
 
