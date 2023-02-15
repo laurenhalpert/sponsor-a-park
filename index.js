@@ -54,6 +54,11 @@ function renderPark(park) {
         card.querySelector("span").textContent = park.donations;
         updateDonations(park);
     });
+
+    card.querySelector("#abandon").addEventListener(("click"), () => {
+        card.remove();
+        deleteCard(park);
+    })
     document.querySelector("#park_list").appendChild(card);
 }
 
@@ -98,6 +103,17 @@ function updateDonations(parkObj) {
     })
 }
 
+function deleteCard(parkObj) {
+    fetch (`http://localhost:3000/parks/${parkObj.id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => response.json())
+    .then(park => console.log(park));
+    
+}
 
 
 //other

@@ -20,13 +20,6 @@
       "imageURL": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg",
       "description": "Grand Canyon National Park is in Arizona.",
       "donations": 0
-    },
-    {
-      "name": "Banff National Park",
-      "imageURL": "https://banffnationalpark.com/wp-content/uploads/2022/04/banff-guide.jpg",
-      "description": "Banff National Park is in Alberta, Canada",
-      "donations": 0,
-      "id": 5
     }
   ]
 }
